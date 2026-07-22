@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   XXXXXXX,  XXXXXXX,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
      CTL_A,   ALT_S,   GUI_D,   SFT_F,   KC_G,   XXXXXXX,  XXXXXXX,  KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_GRV,   KC_QUOT,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-     XXXXXXX, XXXXXXX, XXXXXXX, NAV_ESC, SYM_TAB,NUM_SPC,  NUM_ENT,  SYM_BSPC,NAV_DEL, MO(FUN), KC_RALT, XXXXXXX
+     XXXXXXX, XXXXXXX, MO(FUN), NAV_ESC, SYM_TAB,NUM_SPC,  NUM_ENT,  SYM_BSPC,NAV_DEL, MO(FUN), KC_RALT, XXXXXXX
 ),
 
 [NAV] = LAYOUT_ortho_4x12(
@@ -65,10 +65,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      XXXXXXX, XXXXXXX, XXXXXXX, KC_PIPE, KC_UNDS,_______,  _______,  KC_BSPC, KC_DEL,  XXXXXXX, XXXXXXX, XXXXXXX
 ),
 
-// Held by the right thumb, so everything lives on the left hand. F1-F9 sit on
-// the same nine keys the digits use on NUM, so the reach carries over.
+// F1-F9 sit on the same nine keys the digits use on NUM, so the reach carries
+// over. The layer key and QK_BOOT are mirrored onto both halves: flashing means
+// connecting one half on its own, and a combo spanning both would be unusable.
 [FUN] = LAYOUT_ortho_4x12(
-     QK_BOOT, KC_F1,   KC_F2,   KC_F3,   KC_F10, KC_VOLU,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     QK_BOOT, KC_F1,   KC_F2,   KC_F3,   KC_F10, KC_VOLU,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
      XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11, KC_VOLD,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
      XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F12, KC_MUTE,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
      XXXXXXX, XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY,KC_MNXT,  XXXXXXX,  XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX
