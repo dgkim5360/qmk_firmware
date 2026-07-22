@@ -6,6 +6,9 @@
 // The board is a 4x12 ortho split, but only the corne-equivalent 3x5+3 is used:
 // each half keeps its outer five columns, and the inner column is left dead
 // except for the two bottom keys holding ` and '.
+//
+// KC_RALT next to the right thumb cluster is the Hangul/English toggle: the
+// Windows Korean IME treats right alt as 한/영. macOS uses ctrl-space instead.
 
 #define CTL_A LCTL_T(KC_A)
 #define ALT_S LALT_T(KC_S)
@@ -37,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   XXXXXXX,  XXXXXXX,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
      CTL_A,   ALT_S,   GUI_D,   SFT_F,   KC_G,   XXXXXXX,  XXXXXXX,  KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_GRV,   KC_QUOT,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-     XXXXXXX, XXXXXXX, XXXXXXX, NAV_ESC, SYM_TAB,NUM_SPC,  NUM_ENT,  SYM_BSPC,NAV_DEL, XXXXXXX, XXXXXXX, XXXXXXX
+     XXXXXXX, XXXXXXX, XXXXXXX, NAV_ESC, SYM_TAB,NUM_SPC,  NUM_ENT,  SYM_BSPC,NAV_DEL, KC_RALT, XXXXXXX, XXXXXXX
 ),
 
 [NAV] = LAYOUT_ortho_4x12(
